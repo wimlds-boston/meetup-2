@@ -1,0 +1,12 @@
+name: Boston_Viz
+title: Boston_Viz
+username:
+account: kintany
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 927746
+bundleId: 2081845
+url: https://kintany.shinyapps.io/Boston_Viz/
+when: 1557790685.25355
+asMultiple: FALSE
+asStatic: FALSE
