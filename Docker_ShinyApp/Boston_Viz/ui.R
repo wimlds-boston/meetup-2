@@ -20,11 +20,14 @@ shinyUI(fluidPage(
     sidebarPanel(
       selectInput("year", "Year:", 
                   choices=c(2016:2019)),
-       sliderInput("bins",
-                   "Number of bins:",
-                   min = 1,
-                   max = 50,
-                   value = 30)
+      radioButtons("gender", "Gender",
+                   choices = c("All", "Female", "Male"),
+                   selected = "All"),
+       sliderInput("age",
+                   "Age:",
+                   min = 18,
+                   max = 85,
+                   value = c(18, 60))
     ),
     
     # Show a plot of the generated distribution

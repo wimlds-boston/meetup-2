@@ -31,15 +31,28 @@ shinyServer(function(input, output) {
     marathon_2016 <- read.delim2("data/marathon_results_2016_updated.txt", stringsAsFactors=FALSE)    
     marathon_2016$Official.Time <- hms(marathon_2016$Official.Time)
     
-    # generate bins based on input$bins from ui.R
-    if (input$year == 2016)  x <- as.numeric(marathon_2016$Official.Time)/3600
-    if (input$year == 2017)  x <- as.numeric(marathon_2017$Official.Time)/3600
-    if (input$year == 2018)  x <- as.numeric(marathon_2018$Official.Time)/3600
-    if (input$year == 2019)  x <- as.numeric(marathon_2019$Official.Time)/3600
-    bins <- seq(min(x, na.rm = T), max(x, na.rm = T), length.out = input$bins + 1)
+    # select dataset based on input$year
+    if (input$year == 2016)  df <- marathon_2016
+    if (input$year == 2017)  df <- marathon_2017
+    if (input$year == 2018)  df <- marathon_2018
+    if (input$year == 2019)  df <- marathon_2019
     
-    # draw the histogram with the specified number of bins
-    hist(x, breaks = bins, col = 'darkgray', border = 'white')
+    # subset to input$gender
+    if (input$gender != "All") {
+      if (input$gender == "Female") df <- df[df$M.F == "F",]
+      if (input$gender == "Male") df <- df[df$M.F == "M",]
+    }
+    
+    # subset to input$age
+    df <- df[((df$Age >= input$age[1]) & (df$Age <= input$age[2])),]
+    
+    # draw the histogram
+    ggplot(df, aes(as.numeric(hms(df$Official.Time))/3600)) + 
+      geom_histogram(alpha = 0.5) + 
+      theme_bw() +
+      xlab("Official finish time (hours)") +
+      ylab("Number of finishers") +
+      xlim(c(2,8))
     
   })
   
