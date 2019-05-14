@@ -19,20 +19,29 @@ shinyUI(fluidPage(
   sidebarLayout(
     sidebarPanel(
       selectInput("year", "Year:", 
-                  choices=c(2016:2019)),
+                  choices=c(2016:2019), selected = 2019),
       radioButtons("gender", "Gender",
                    choices = c("All", "Female", "Male"),
                    selected = "All"),
-       sliderInput("age",
-                   "Age:",
-                   min = 18,
-                   max = 85,
-                   value = c(18, 60))
+      sliderInput("age",
+                  "Age:",
+                  min = 18,
+                  max = 85,
+                  value = c(18, 60)),
+      textInput("name", "Runner name")
     ),
     
     # Show a plot of the generated distribution
     mainPanel(
-       plotOutput("distPlot")
+      tabsetPanel(
+        id = "results",
+        tabPanel("Times Histogram",
+                 plotOutput("distPlot")
+        ),
+        tabPanel("Runner's data",
+                 dataTableOutput("runnerData")
+        )
+      )
     )
   )
 ))
