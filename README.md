@@ -1,17 +1,17 @@
 ## WiMLDS Boston #2
 
 ### __Agenda__
-### Host & Sponsor: EF Education First
+* ### Host & Sponsor: EF Education First
 
-### Introduction: Haylee
+* ### Introduction: Haylee
 
-### Sessions 1 & 2
+* ### Sessions 1 & 2
 1. Haylee Ham: Word Embeddings (Laboratory for Innovation Science at Harvard)
 2. Svetlana Vinogradova: Shiny+Docker (Dana-Farber Cancer Institute)
 3. Kathryn Wong: Bayesian Parameter Estimation (Vertex Pharmaceuticals)
 4. Ava Hoffman: Intro to Git
 
-### Food and Chat
+* ### Food and Chat
 
 ----
 
