@@ -15,3 +15,6 @@
 - `cd shiny_docker'`
 - Check out `tutorial_Shiny.pdf`
 
+### Getting started with Shiny + Docker tutorial
+- install Shiny library in R
+- install Docker https://www.docker.com/products/docker-desktop
