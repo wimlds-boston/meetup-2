@@ -1,6 +1,6 @@
-# WiMLDS Boston #2
+## WiMLDS Boston #2
 
-## __Agenda__
+### __Agenda__
 ### Host & Sponsor: EF Education First
 
 ### Introduction: Haylee
@@ -15,7 +15,7 @@
 
 ----
 
-## We have the code for three fantastic tutorials from our second WiMLDS Boston meetup.
+### We have the code for three fantastic tutorials from our second WiMLDS Boston meetup.
 
 ### Getting started for the word embeddings tutorial
 - `cd word_embeddings/`
