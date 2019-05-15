@@ -12,9 +12,7 @@
 - `jupyter notebook`
 
 ### Getting started for the Shiny + Docker tutorial
-- `cd shiny_docker'`
-- Check out `tutorial_Shiny.pdf`
-
-### Getting started with Shiny + Docker tutorial
+- `cd shiny_docker/`
 - install Shiny library in R
 - install Docker https://www.docker.com/products/docker-desktop
+- Check out `tutorial_Shiny.pdf`
